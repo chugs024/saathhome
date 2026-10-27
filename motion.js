@@ -2,6 +2,14 @@
 (() => {
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // The bar matches whatever is under it: dark over the hero, the page colour after.
+  const top = document.querySelector(".top"), hero = document.querySelector(".hero");
+  if (top && hero) {
+    const io = new IntersectionObserver(([e]) => top.classList.toggle("on-dark", e.isIntersecting),
+      { rootMargin: "0px 0px -92% 0px" });
+    io.observe(hero);
+  }
+
   // Features: the step nearest the middle of the screen is "on", and the phone shows its screen.
   const steps = [...document.querySelectorAll(".step")];
   const screens = [...document.querySelectorAll(".screen")];

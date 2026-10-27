@@ -10,14 +10,14 @@
 <meta name="description" content="One shared place for groceries, chores, bills, plans and little notes. On your iPhones, and on the kitchen TV if you like.">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preload" href="fonts/Manrope.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts/Manrope.ttf?v=28" as="font" type="font/ttf" crossorigin>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Saath">
 <meta property="og:title" content="Saath: Home, Together">
 <meta property="og:description" content="Groceries by aisle, chores you share, bills, plans and notes, shared between your iPhones. Apple TV wall screen optional.">
 <meta property="og:image" content="og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="site.css?v=28">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -42,34 +42,56 @@
 </div></header>
 
 <main id="main">
-  <section class="hero"><div class="wrap">
-    <div>
-      <h1><span class="line"><span>Add milk on your phone.</span></span> <span class="line"><span>It’s on theirs too.</span></span></h1>
-      <p class="lede">Saath is one shared place for the groceries, chores, bills, plans and little notes that keep a home running. One gentle notification instead of ten texts.</p>
-      <div class="cta">
-        <span class="badge"><svg aria-hidden="true"><use href="#i-apple"/></svg>Coming soon to the App Store</span>
-        <p class="price-note"><strong>Free for 7 days</strong>, then $9.99 once. No subscription.</p>
-      </div>
-    </div>
-    <div class="phones">
-      <div class="phone">
-        <picture>
-          <source srcset="img/groceries-dark.jpg" media="(prefers-color-scheme: dark)">
-          <img src="img/groceries.jpg" alt="Saath's grocery list on one phone, sorted by aisle" width="720" height="1566">
-        </picture>
-      </div>
-      <div class="phone">
-        <picture>
-          <source srcset="img/home-dark.jpg" media="(prefers-color-scheme: dark)">
-          <img src="img/home.jpg" alt="The other phone's home screen in Saath" width="720" height="1566">
-        </picture>
-        <div class="notice" role="img" aria-label="Notification: Wife added milk and bread to the groceries list">
-          <img src="icon-512.png" alt="" width="40" height="40">
-          <div><b>Our Home</b><span>Wife added milk and bread to the groceries list</span></div>
+  <section class="hero" data-demo>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1><span class="line"><span>The list</span></span> <span class="line"><span>you both see.</span></span></h1>
+        <p class="lede">Add milk on your phone and it’s on theirs, sorted by aisle, with one gentle notification. Saath is the shared home for groceries, chores, bills, plans and notes.</p>
+        <div class="cta">
+          <span class="badge"><svg aria-hidden="true"><use href="#i-apple"/></svg>Coming soon to the App Store</span>
+          <p class="price-note"><strong>Free for 7 days</strong>, then $9.99 once.</p>
         </div>
       </div>
+      <div class="demo">
+        <div class="pair">
+        <figure class="dphone mine">
+          <div class="d-screen">
+          <div class="d-status" aria-hidden="true"><span>9:41</span><span class="d-island"></span><span class="d-bars"></span></div>
+          <div class="d-head"><h3>Groceries</h3><span class="d-count" data-count>2</span></div>
+          <div class="d-composer"><span class="d-plus" aria-hidden="true"></span><span class="d-typed" data-mirror></span><span class="d-caret" aria-hidden="true"></span><span class="d-ph">Add milk, bread, 2 kg rice…</span></div>
+          <ul class="d-list" data-list aria-label="Your phone grocery list"></ul>
+          </div>
+          <figcaption>Your phone</figcaption>
+        </figure>
+          <div class="d-wire" data-wire aria-hidden="true"><span></span></div>
+        <figure class="dphone theirs">
+          <div class="d-screen">
+          <div class="d-status" aria-hidden="true"><span>9:41</span><span class="d-island"></span><span class="d-bars"></span></div>
+          <div class="d-banner" data-banner aria-hidden="true"><img src="icon-512.png?v=28" alt="" width="36" height="36"><div><b>Our Home</b><span data-text></span></div><time>now</time></div>
+          <div class="d-head"><h3>Groceries</h3><span class="d-count" data-count>2</span></div>
+          <ul class="d-list" data-list aria-label="Theirs grocery list"></ul>
+          </div>
+          <figcaption>Theirs</figcaption>
+        </figure>
+        </div>
+        <form class="d-form" autocomplete="off">
+          <label for="d-input">Try it. Type what you need, the way you’d say it.</label>
+          <div class="d-field">
+            <input id="d-input" name="items" type="text" enterkeyhint="send" spellcheck="false" placeholder="milk, dhana, 2 kg rice">
+            <button type="submit">Add</button>
+          </div>
+          <div class="d-try" aria-label="Or tap one">
+            <button type="button" data-try="paneer">paneer</button>
+            <button type="button" data-try="bhinda, doodh">bhinda, doodh</button>
+            <button type="button" data-try="agarbatti">agarbatti</button>
+            <button type="button" data-try="6 bananas">6 bananas</button>
+            <button type="button" data-try="dhana jiru">dhana jiru</button>
+          </div>
+        </form>
+        <p class="sr-only" aria-live="polite" data-live></p>
+      </div>
     </div>
-  </div></section>
+  </section>
 
   <section class="section" id="features"><div class="wrap">
     <div class="section-head">
@@ -81,42 +103,42 @@
         <article class="step" data-step="0">
           <h3>Groceries, sorted by aisle</h3>
           <p>Type “milk, bread, 2 kg rice” and Saath files each one where you’ll find it in the store. It understands English, Hindi and Gujarati names, and reminds you when you walk into your store.</p>
-          <div class="shot step-shot"><picture class=""><source srcset="img/groceries-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/groceries.jpg" alt="The grocery list grouped by aisle" loading="lazy" width="720" height="1566"></picture></div>
+          <div class="shot step-shot"><picture class=""><source srcset="img/groceries-dark.jpg?v=28" media="(prefers-color-scheme: dark)"><img src="img/groceries.jpg?v=28" alt="The grocery list grouped by aisle" loading="lazy" width="720" height="1566"></picture></div>
         </article>
         <article class="step" data-step="1">
           <h3>Chores, done together</h3>
           <p>Each chore shows who’s doing it: one of you, or both. Tap Done and it comes back on its day. Kids get their own chores, and stars for doing them.</p>
-          <div class="shot step-shot"><picture class=""><source srcset="img/chores-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/chores.jpg" alt="Chores with who is doing each one" loading="lazy" width="720" height="1566"></picture></div>
+          <div class="shot step-shot"><picture class=""><source srcset="img/chores-dark.jpg?v=28" media="(prefers-color-scheme: dark)"><img src="img/chores.jpg?v=28" alt="Chores with who is doing each one" loading="lazy" width="720" height="1566"></picture></div>
         </article>
         <article class="step" data-step="2">
           <h3>To-dos with a day and a person</h3>
           <p>Give a to-do a date, an importance and who it’s for as you add it. Overdue things rise to the top.</p>
-          <div class="shot step-shot"><picture class=""><source srcset="img/todos-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/todos.jpg" alt="To-dos grouped by when they're due" loading="lazy" width="720" height="1566"></picture></div>
+          <div class="shot step-shot"><picture class=""><source srcset="img/todos-dark.jpg?v=28" media="(prefers-color-scheme: dark)"><img src="img/todos.jpg?v=28" alt="To-dos grouped by when they're due" loading="lazy" width="720" height="1566"></picture></div>
         </article>
         <article class="step" data-step="3">
           <h3>Bills before they’re due</h3>
           <p>Rent, electricity, internet and the rest, with a reminder the day before. The next 30 days at a glance, and who paid last.</p>
-          <div class="shot step-shot"><picture class=""><source srcset="img/bills-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/bills.jpg" alt="Bills due in the next 30 days" loading="lazy" width="720" height="1566"></picture></div>
+          <div class="shot step-shot"><picture class=""><source srcset="img/bills-dark.jpg?v=28" media="(prefers-color-scheme: dark)"><img src="img/bills.jpg?v=28" alt="Bills due in the next 30 days" loading="lazy" width="720" height="1566"></picture></div>
         </article>
         <article class="step" data-step="4">
           <h3>Your shared week</h3>
           <p>The calendars already on your iPhone, Google ones included. Mark who’s going, who’s driving, and what to bring.</p>
-          <div class="shot step-shot"><picture class=""><source srcset="img/calendar-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/calendar.jpg" alt="The week's plans with who's going" loading="lazy" width="720" height="1566"></picture></div>
+          <div class="shot step-shot"><picture class=""><source srcset="img/calendar-dark.jpg?v=28" media="(prefers-color-scheme: dark)"><img src="img/calendar.jpg?v=28" alt="The week's plans with who's going" loading="lazy" width="720" height="1566"></picture></div>
         </article>
         <article class="step" data-step="5">
           <h3>A note on the wall</h3>
           <p>“Made chipotle sauce for your lunch.” A post-it for the people at home, on their phone and on the kitchen TV.</p>
-          <div class="shot step-shot"><picture class=""><source srcset="img/note-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/note.jpg" alt="Writing a note for the wall" loading="lazy" width="720" height="1566"></picture></div>
+          <div class="shot step-shot"><picture class=""><source srcset="img/note-dark.jpg?v=28" media="(prefers-color-scheme: dark)"><img src="img/note.jpg?v=28" alt="Writing a note for the wall" loading="lazy" width="720" height="1566"></picture></div>
         </article>
       </div>
       <div class="device-rail" aria-hidden="true">
         <div class="device">
-          <div class="screen on" data-screen="0"><picture class=""><source srcset="img/groceries-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/groceries.jpg" alt="" width="720" height="1566"></picture></div>
-          <div class="screen" data-screen="1"><picture class=""><source srcset="img/chores-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/chores.jpg" alt="" loading="lazy" width="720" height="1566"></picture></div>
-          <div class="screen" data-screen="2"><picture class=""><source srcset="img/todos-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/todos.jpg" alt="" loading="lazy" width="720" height="1566"></picture></div>
-          <div class="screen" data-screen="3"><picture class=""><source srcset="img/bills-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/bills.jpg" alt="" loading="lazy" width="720" height="1566"></picture></div>
-          <div class="screen" data-screen="4"><picture class=""><source srcset="img/calendar-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/calendar.jpg" alt="" loading="lazy" width="720" height="1566"></picture></div>
-          <div class="screen" data-screen="5"><picture class=""><source srcset="img/note-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/note.jpg" alt="" loading="lazy" width="720" height="1566"></picture></div>
+          <div class="screen on" data-screen="0"><picture class=""><source srcset="img/groceries-dark.jpg?v=28" media="(prefers-color-scheme: dark)"><img src="img/groceries.jpg?v=28" alt="" width="720" height="1566"></picture></div>
+          <div class="screen" data-screen="1"><picture class=""><source srcset="img/chores-dark.jpg?v=28" media="(prefers-color-scheme: dark)"><img src="img/chores.jpg?v=28" alt="" loading="lazy" width="720" height="1566"></picture></div>
+          <div class="screen" data-screen="2"><picture class=""><source srcset="img/todos-dark.jpg?v=28" media="(prefers-color-scheme: dark)"><img src="img/todos.jpg?v=28" alt="" loading="lazy" width="720" height="1566"></picture></div>
+          <div class="screen" data-screen="3"><picture class=""><source srcset="img/bills-dark.jpg?v=28" media="(prefers-color-scheme: dark)"><img src="img/bills.jpg?v=28" alt="" loading="lazy" width="720" height="1566"></picture></div>
+          <div class="screen" data-screen="4"><picture class=""><source srcset="img/calendar-dark.jpg?v=28" media="(prefers-color-scheme: dark)"><img src="img/calendar.jpg?v=28" alt="" loading="lazy" width="720" height="1566"></picture></div>
+          <div class="screen" data-screen="5"><picture class=""><source srcset="img/note-dark.jpg?v=28" media="(prefers-color-scheme: dark)"><img src="img/note.jpg?v=28" alt="" loading="lazy" width="720" height="1566"></picture></div>
         </div>
       </div>
     </div>
@@ -141,8 +163,8 @@
         <p class="lede">Got an Apple TV? The wall screen is included: the time, today’s plans, notes, the grocery list by aisle, to-dos and chores. Light by day, warm and dark in the evening, landscape or portrait.</p>
       </div>
       <figure class="tv-frame">
-        <img class="tv-day" src="img/tv-day.jpg" alt="The wall screen in the daytime" loading="lazy" width="1800" height="1012">
-        <img class="tv-night" src="img/tv-evening.jpg" alt="The wall screen in the evening" loading="lazy" width="1800" height="1012">
+        <img class="tv-day" src="img/tv-day.jpg?v=28" alt="The wall screen in the daytime" loading="lazy" width="1800" height="1012">
+        <img class="tv-night" src="img/tv-evening.jpg?v=28" alt="The wall screen in the evening" loading="lazy" width="1800" height="1012">
         <figcaption><span class="cap-day">By day</span><span class="cap-night">In the evening</span></figcaption>
       </figure>
     </div></div>
@@ -150,7 +172,7 @@
 
   <section class="film" aria-label="Film"><div class="wrap">
     <figure>
-      <video src="film/saath.mp4" poster="film/poster.jpg" controls playsinline preload="none" aria-label="A one-minute film showing Saath on two phones and a kitchen TV"></video>
+      <video src="film/saath.mp4?v=28" poster="film/poster.jpg?v=28" controls playsinline preload="none" aria-label="A one-minute film showing Saath on two phones and a kitchen TV"></video>
       <figcaption>A minute with Saath. Sound on.</figcaption>
     </figure>
   </div></section>
@@ -199,6 +221,8 @@
   <nav aria-label="More"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="mailto:help.saath@gmail.com">Contact</a></nav>
   <span class="tm">Apple, iPhone, Apple TV, iCloud and Siri are trademarks of Apple Inc., registered in the U.S. and other countries and regions. Google Calendar is a trademark of Google LLC. Saath is not affiliated with or endorsed by either.</span>
 </div></footer>
-<script src="motion.js" defer></script>
+<script src="aisles.js?v=28" defer></script>
+<script src="demo.js?v=28" defer></script>
+<script src="motion.js?v=28" defer></script>
 </body>
 </html>
