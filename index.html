@@ -1,24 +1,38 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>document.documentElement.classList.add("js")</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#FFF8F3">
+<meta name="theme-color" content="#FFF8F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15110F" media="(prefers-color-scheme: dark)">
 <title>Saath: Home, Together</title>
 <meta name="description" content="One shared place for groceries, chores, bills, plans and little notes. On your iPhones, and on the kitchen TV if you like.">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/Manrope.ttf" as="font" type="font/ttf" crossorigin>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Saath">
 <meta property="og:title" content="Saath: Home, Together">
-<meta property="og:description" content="Groceries by aisle, chores that take turns, bills, plans and notes, shared between your iPhones. Apple TV wall screen optional.">
+<meta property="og:description" content="Groceries by aisle, chores you share, bills, plans and notes, shared between your iPhones. Apple TV wall screen optional.">
 <meta property="og:image" content="og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- One icon set, drawn at one stroke weight. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 1112 0v5.5l1.5 2h-15zM10 20.5a2 2 0 004 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.66 0l3-3a4 4 0 00-5.66-5.66l-1 1M14 10a4 4 0 00-5.66 0l-3 3a4 4 0 005.66 5.66l1-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.97-3.46-1.07-1.57-2.74-1.79-3.33-1.81-1.42-.14-2.77.83-3.49.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.59-.75 2.99-.75 1.4 0 1.79.75 3.01.72 1.24-.02 2.03-1.13 2.79-2.25.88-1.29 1.24-2.53 1.26-2.6-.03-.01-2.42-.93-2.45-3.7zM14.1 5.86c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.77-.97 2.83 1.03.08 2.07-.52 2.71-1.29z"/></symbol>
+</svg>
+
 <header class="top"><div class="wrap">
-  <a class="brand" href="./" aria-label="Saath home"><img src="icon-512.png" alt="" width="32" height="32">Saath</a>
+  <a class="brand" href="./"><img src="icon-512.png" alt="" width="32" height="32">Saath</a>
   <nav aria-label="Main">
     <a class="hide-sm" href="#features">Features</a>
     <a class="hide-sm" href="#wall">Wall screen</a>
@@ -27,138 +41,155 @@
   </nav>
 </div></header>
 
-<main>
+<main id="main">
   <section class="hero"><div class="wrap">
     <div>
-      <p class="kicker">For iPhone · Apple TV optional</p>
-      <h1 style="margin-top:14px">Home,<br><em>together.</em></h1>
-      <p class="lede">One shared place for the groceries, chores, bills, plans and little notes that keep a home running. Add milk on your phone and it's on theirs too, with one gentle notification instead of ten texts.</p>
+      <h1><span class="line"><span>Add milk on your phone.</span></span> <span class="line"><span>It’s on theirs too.</span></span></h1>
+      <p class="lede">Saath is one shared place for the groceries, chores, bills, plans and little notes that keep a home running. One gentle notification instead of ten texts.</p>
       <div class="cta">
-        <span class="badge" aria-label="Coming soon on the App Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.97-3.46-1.07-1.57-2.74-1.79-3.33-1.81-1.42-.14-2.77.83-3.49.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.59-.75 2.99-.75 1.4 0 1.79.75 3.01.72 1.24-.02 2.03-1.13 2.79-2.25.88-1.29 1.24-2.53 1.26-2.6-.03-.01-2.42-.93-2.45-3.7zM14.1 5.86c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.77-.97 2.83 1.03.08 2.07-.52 2.71-1.29z"/></svg>Coming soon on the App Store</span>
+        <span class="badge"><svg aria-hidden="true"><use href="#i-apple"/></svg>Coming soon to the App Store</span>
         <p class="price-note"><strong>Free for 7 days</strong>, then $9.99 once. No subscription.</p>
       </div>
     </div>
-    <div class="phones" aria-hidden="true">
-      <div class="phone a"><img src="img/groceries.jpg" alt="" width="1100" height="2392"></div>
-      <div class="phone b"><img src="img/home.jpg" alt="" width="1100" height="2392"></div>
+    <div class="phones">
+      <div class="phone">
+        <picture>
+          <source srcset="img/groceries-dark.jpg" media="(prefers-color-scheme: dark)">
+          <img src="img/groceries.jpg" alt="Saath's grocery list on one phone, sorted by aisle" width="720" height="1566">
+        </picture>
+      </div>
+      <div class="phone">
+        <picture>
+          <source srcset="img/home-dark.jpg" media="(prefers-color-scheme: dark)">
+          <img src="img/home.jpg" alt="The other phone's home screen in Saath" width="720" height="1566">
+        </picture>
+        <div class="notice" role="img" aria-label="Notification: Wife added milk and bread to the groceries list">
+          <img src="icon-512.png" alt="" width="40" height="40">
+          <div><b>Our Home</b><span>Wife added milk and bread to the groceries list</span></div>
+        </div>
+      </div>
     </div>
-  </div></section>
-
-  <section class="film"><div class="wrap">
-    <figure>
-      <video src="film/saath.mp4" poster="film/poster.jpg" controls playsinline preload="none" aria-label="A one-minute film showing Saath on two phones and a kitchen TV"></video>
-    </figure>
-    <figcaption>A minute with Saath. Sound on.</figcaption>
   </div></section>
 
   <section class="section" id="features"><div class="wrap">
-    <div class="section-head reveal">
-      <p class="kicker">Built for busy homes</p>
-      <h2 style="margin-top:12px">Less "did you get the milk?"<br>More on the same page.</h2>
-      <p class="lede">Everything you share lives in one calm app on both your phones. Change something on one, it's on the other in seconds.</p>
+    <div class="section-head">
+      <h2>Everything a home juggles, in one calm app.</h2>
+      <p class="lede">It lives on both your phones. Change something on one, and it’s on the other in seconds.</p>
     </div>
-    <div class="rows">
-      <div class="row reveal">
-        <div class="copy">
+    <div class="story">
+      <div class="steps">
+        <article class="step" data-step="0">
           <h3>Groceries, sorted by aisle</h3>
-          <p>Type "milk, bread, 2 kg rice" and Saath files each one where you'll find it in the store.</p>
-          <ul>
-            <li>Understands what you call things, in English, Hindi or Gujarati.</li>
-            <li>The usuals: your regulars, one tap to add.</li>
-            <li>Walk into your store and Saath shows what's on the list.</li>
-          </ul>
-        </div>
-        <div class="shot"><img src="img/groceries.jpg" alt="The grocery list grouped by aisle" loading="lazy" width="1100" height="2392"></div>
-      </div>
-      <div class="row reveal">
-        <div class="copy">
-          <h3>Chores that take turns</h3>
-          <p>Saath remembers whose turn it is. Tap Done and it passes to the next person, on the same day each week even if it's done late.</p>
-          <ul>
-            <li>A friendly reminder on the morning it's yours.</li>
-            <li>Undo if you tapped too soon.</li>
-          </ul>
-        </div>
-        <div class="shot"><img src="img/chores.jpg" alt="Chores with whose turn it is" loading="lazy" width="1100" height="2392"></div>
-      </div>
-      <div class="row reveal">
-        <div class="copy">
-          <h3>To-dos that matter</h3>
-          <p>Give a to-do a date, an importance and a person when you add it. Filter by what's high, medium or low.</p>
-        </div>
-        <div class="shot"><img src="img/todos.jpg" alt="To-dos grouped by when they're due" loading="lazy" width="1100" height="2392"></div>
-      </div>
-      <div class="row reveal">
-        <div class="copy">
-          <h3>Never miss a bill</h3>
-          <p>Rent, electricity, internet and the rest, with reminders the day before. See what's due in the next 30 days, and who paid last.</p>
-        </div>
-        <div class="shot"><img src="img/bills.jpg" alt="Bills with what's due in the next 30 days" loading="lazy" width="1100" height="2392"></div>
-      </div>
-      <div class="row reveal">
-        <div class="copy">
+          <p>Type “milk, bread, 2 kg rice” and Saath files each one where you’ll find it in the store. It understands English, Hindi and Gujarati names, and reminds you when you walk into your store.</p>
+          <div class="shot step-shot"><picture class=""><source srcset="img/groceries-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/groceries.jpg" alt="The grocery list grouped by aisle" loading="lazy" width="720" height="1566"></picture></div>
+        </article>
+        <article class="step" data-step="1">
+          <h3>Chores, done together</h3>
+          <p>Each chore shows who’s doing it: one of you, or both. Tap Done and it comes back on its day. Kids get their own chores, and stars for doing them.</p>
+          <div class="shot step-shot"><picture class=""><source srcset="img/chores-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/chores.jpg" alt="Chores with who is doing each one" loading="lazy" width="720" height="1566"></picture></div>
+        </article>
+        <article class="step" data-step="2">
+          <h3>To-dos with a day and a person</h3>
+          <p>Give a to-do a date, an importance and who it’s for as you add it. Overdue things rise to the top.</p>
+          <div class="shot step-shot"><picture class=""><source srcset="img/todos-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/todos.jpg" alt="To-dos grouped by when they're due" loading="lazy" width="720" height="1566"></picture></div>
+        </article>
+        <article class="step" data-step="3">
+          <h3>Bills before they’re due</h3>
+          <p>Rent, electricity, internet and the rest, with a reminder the day before. The next 30 days at a glance, and who paid last.</p>
+          <div class="shot step-shot"><picture class=""><source srcset="img/bills-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/bills.jpg" alt="Bills due in the next 30 days" loading="lazy" width="720" height="1566"></picture></div>
+        </article>
+        <article class="step" data-step="4">
           <h3>Your shared week</h3>
-          <p>Saath shows the calendars on your iPhone, Google ones included, and adds plans to the one you share. Mark who's going and they show up beside each plan.</p>
-        </div>
-        <div class="shot"><img src="img/calendar.jpg" alt="The week's plans with who's going" loading="lazy" width="1100" height="2392"></div>
+          <p>The calendars already on your iPhone, Google ones included. Mark who’s going, who’s driving, and what to bring.</p>
+          <div class="shot step-shot"><picture class=""><source srcset="img/calendar-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/calendar.jpg" alt="The week's plans with who's going" loading="lazy" width="720" height="1566"></picture></div>
+        </article>
+        <article class="step" data-step="5">
+          <h3>A note on the wall</h3>
+          <p>“Made chipotle sauce for your lunch.” A post-it for the people at home, on their phone and on the kitchen TV.</p>
+          <div class="shot step-shot"><picture class=""><source srcset="img/note-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/note.jpg" alt="Writing a note for the wall" loading="lazy" width="720" height="1566"></picture></div>
+        </article>
       </div>
-      <div class="row reveal">
-        <div class="copy">
-          <h3>Leave a little note</h3>
-          <p>"Made chipotle sauce for your lunch. Have a great day!" A post-it for the people at home, on their phone and on the kitchen TV.</p>
+      <div class="device-rail" aria-hidden="true">
+        <div class="device">
+          <div class="screen on" data-screen="0"><picture class=""><source srcset="img/groceries-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/groceries.jpg" alt="" width="720" height="1566"></picture></div>
+          <div class="screen" data-screen="1"><picture class=""><source srcset="img/chores-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/chores.jpg" alt="" loading="lazy" width="720" height="1566"></picture></div>
+          <div class="screen" data-screen="2"><picture class=""><source srcset="img/todos-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/todos.jpg" alt="" loading="lazy" width="720" height="1566"></picture></div>
+          <div class="screen" data-screen="3"><picture class=""><source srcset="img/bills-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/bills.jpg" alt="" loading="lazy" width="720" height="1566"></picture></div>
+          <div class="screen" data-screen="4"><picture class=""><source srcset="img/calendar-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/calendar.jpg" alt="" loading="lazy" width="720" height="1566"></picture></div>
+          <div class="screen" data-screen="5"><picture class=""><source srcset="img/note-dark.jpg" media="(prefers-color-scheme: dark)"><img src="img/note.jpg" alt="" loading="lazy" width="720" height="1566"></picture></div>
         </div>
-        <div class="shot"><img src="img/note.jpg" alt="Writing a note for the wall" loading="lazy" width="1100" height="2392"></div>
       </div>
     </div>
   </div></section>
 
-  <section class="section band"><div class="wrap">
-    <div class="section-head reveal">
-      <p class="kicker">No TV needed</p>
-      <h2 style="margin-top:12px">Works beautifully on your iPhones alone.</h2>
-      <p class="lede">Everything stays in sync between your phones, and gentle notifications keep you both in step. The wall screen is a bonus, not a requirement.</p>
+  <section class="section surface"><div class="wrap">
+    <div class="section-head">
+      <h2>Works on your iPhones alone.</h2>
+      <p class="lede">No TV needed. Everything stays in sync between your phones, and the wall screen is a bonus.</p>
     </div>
-    <div class="cards">
-      <div class="card reveal"><div class="ico">🔔</div><h3>One note, not ten</h3><p>Quick changes arrive together: "Got milk, bread and apples." Your own changes never notify you.</p></div>
-      <div class="card reveal"><div class="ico">🗣️</div><h3>Siri and widgets</h3><p>"Hey Siri, add to my grocery list in Saath." And the list on your Home Screen and Lock Screen.</p></div>
-      <div class="card reveal"><div class="ico">💌</div><h3>Invite with a link</h3><p>Send an invite from the app. They tap it, pick a name and emoji, and you share one home.</p></div>
-    </div>
-  </div></section>
-
-  <section class="section" id="wall"><div class="wrap">
-    <div class="section-head reveal">
-      <p class="kicker">Apple TV · optional</p>
-      <h2 style="margin-top:12px">A calm wall screen for the kitchen.</h2>
-      <p class="lede">Got an Apple TV? The wall screen app is included. The time, today's plans, notes, the grocery list by aisle, to-dos and chores. Light by day, warm and dark in the evening, a dim clock overnight. Landscape or portrait.</p>
-    </div>
-    <div class="tv">
-      <figure class="reveal"><img src="img/tv-day.jpg" alt="The wall screen in the daytime" loading="lazy" width="1800" height="1013"><figcaption>By day</figcaption></figure>
-      <figure class="reveal"><img src="img/tv-evening.jpg" alt="The wall screen in the evening" loading="lazy" width="1800" height="1013"><figcaption>In the evening</figcaption></figure>
+    <div class="points">
+      <div class="point"><svg aria-hidden="true"><use href="#i-bell"/></svg><h3>One note, not ten</h3><p>Quick changes arrive together: "Got milk, bread and apples." Your own changes never notify you.</p></div>
+      <div class="point"><svg aria-hidden="true"><use href="#i-wave"/></svg><h3>Siri and widgets</h3><p>"Hey Siri, add to my grocery list in Saath." The list sits on your Home Screen and Lock Screen.</p></div>
+      <div class="point"><svg aria-hidden="true"><use href="#i-link"/></svg><h3>Invite with a link</h3><p>Send an invite from the app. They tap it, pick a name and an emoji, and you share one home.</p></div>
     </div>
   </div></section>
 
-  <section class="section band" id="pricing"><div class="wrap pricing">
-    <div class="reveal">
-      <p class="kicker">Simple pricing</p>
-      <h2 style="margin-top:12px">Try it free for a week. Buy once.</h2>
-      <p class="lede" style="margin-top:18px">Everything is included in the free week. After that, one purchase unlocks Saath for good, on iPhone and Apple TV.</p>
+  <section class="dusk" id="wall">
+    <div class="dusk-stage"><div class="wrap">
+      <div class="section-head">
+        <h2>A calm screen for the kitchen wall.</h2>
+        <p class="lede">Got an Apple TV? The wall screen is included: the time, today’s plans, notes, the grocery list by aisle, to-dos and chores. Light by day, warm and dark in the evening, landscape or portrait.</p>
+      </div>
+      <figure class="tv-frame">
+        <img class="tv-day" src="img/tv-day.jpg" alt="The wall screen in the daytime" loading="lazy" width="1800" height="1012">
+        <img class="tv-night" src="img/tv-evening.jpg" alt="The wall screen in the evening" loading="lazy" width="1800" height="1012">
+        <figcaption><span class="cap-day">By day</span><span class="cap-night">In the evening</span></figcaption>
+      </figure>
+    </div></div>
+  </section>
+
+  <section class="film" aria-label="Film"><div class="wrap">
+    <figure>
+      <video src="film/saath.mp4" poster="film/poster.jpg" controls playsinline preload="none" aria-label="A one-minute film showing Saath on two phones and a kitchen TV"></video>
+      <figcaption>A minute with Saath. Sound on.</figcaption>
+    </figure>
+  </div></section>
+
+  <section class="section surface" id="pricing"><div class="wrap pricing">
+    <div>
+      <h2>Try it free for a week. Then buy it once.</h2>
+      <p class="lede">Everything is included in the free week. After that, one purchase unlocks Saath for good.</p>
     </div>
-    <div class="price-card reveal">
+    <div class="price-card">
       <div class="big">$9.99<small>once</small></div>
       <ul>
-        <li>No subscription, ever</li>
-        <li>iPhone and Apple TV included</li>
-        <li>Shared with your family through Family Sharing</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>No subscription, ever</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>iPhone and Apple TV included</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Shared with your family through Family Sharing</li>
       </ul>
       <p class="fine">Free for 7 days first. Apple TV and screen not included.</p>
     </div>
   </div></section>
 
   <section class="section"><div class="wrap">
-    <div class="section-head reveal">
-      <p class="kicker">Private by design</p>
-      <h2 style="margin-top:12px">Your home stays yours.</h2>
-      <p class="lede">No accounts, no ads, no analytics, no servers of ours. Everything lives in your own iCloud and is shared only with the people you invite. <a href="privacy.html">Read the privacy policy</a>.</p>
+    <div class="section-head">
+      <h2>Questions</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Do we need an Apple TV?</summary><p>No. Saath works fully on your iPhones. If you have an Apple TV, the wall screen app is included at no extra cost.</p></details>
+      <details><summary>Does each of us have to buy it?</summary><p>One purchase covers your Apple Account on iPhone and Apple TV, and everyone in your Family Sharing group.</p></details>
+      <details><summary>Where is our data kept?</summary><p>In your own iCloud, shared only with the people you invite. Saath has no accounts, no ads, no analytics and no servers of its own. <a href="privacy.html">Read the privacy policy</a>.</p></details>
+      <details><summary>Does it work with Google Calendar?</summary><p>Yes. Saath shows the calendars on your iPhone, so a Google calendar added in Settings shows up too.</p></details>
+      <details><summary>Which languages does the grocery list understand?</summary><p>English, Hindi and Gujarati names for everyday groceries, so dhana, bhinda and doodh land in the right aisle.</p></details>
+      <details><summary>What happens after the free week?</summary><p>Buy Saath once for $9.99 to keep using it. Nothing renews and nothing is charged automatically.</p></details>
+    </div>
+  </div></section>
+
+  <section class="section surface closing"><div class="wrap">
+    <h2>Get your home on the same page.</h2>
+    <div class="cta">
+      <span class="badge"><svg aria-hidden="true"><use href="#i-apple"/></svg>Coming soon to the App Store</span>
+      <p class="price-note"><strong>Free for 7 days</strong>, then $9.99 once.</p>
     </div>
   </div></section>
 </main>
@@ -168,13 +199,6 @@
   <nav aria-label="More"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="mailto:help.saath@gmail.com">Contact</a></nav>
   <span class="tm">Apple, iPhone, Apple TV, iCloud and Siri are trademarks of Apple Inc., registered in the U.S. and other countries and regions. Google Calendar is a trademark of Google LLC. Saath is not affiliated with or endorsed by either.</span>
 </div></footer>
-
-<script>
-  // Ease sections in as they scroll into view.
-  const io = 'IntersectionObserver' in window && new IntersectionObserver((entries) => {
-    for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-  }, { rootMargin: '0px 0px -8% 0px' });
-  document.querySelectorAll('.reveal').forEach((el) => io ? io.observe(el) : el.classList.add('in'));
-</script>
+<script src="motion.js" defer></script>
 </body>
 </html>
